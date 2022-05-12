@@ -33,16 +33,6 @@
         app:layout_constraintStart_toStartOf="@+id/edTitle"
         app:layout_constraintTop_toBottomOf="@+id/edTitle" />
 
-    <TextView
-        android:id="@+id/tvTest"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/edText"
-        app:layout_constraintStart_toStartOf="@+id/edText"
-        app:layout_constraintTop_toBottomOf="@+id/edText" />
-
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
@@ -51,6 +41,22 @@
         android:onClick="onClickSave"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvTest"
-        app:layout_constraintStart_toStartOf="@+id/tvTest" />
+        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="375dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/edText"
+        app:layout_constraintStart_toStartOf="@+id/edText"
+        app:layout_constraintTop_toBottomOf="@+id/edText">
+
+        <TextView
+            android:id="@+id/tvTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
