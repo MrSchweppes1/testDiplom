@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BFE3DEED"
     tools:context=".AddStudent">
 
     <Button
@@ -55,7 +56,7 @@
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -69,7 +70,7 @@
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Фамилия"
@@ -82,7 +83,7 @@
     <EditText
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Имя"
@@ -95,7 +96,7 @@
     <EditText
         android:id="@+id/editTextTextPersonName7"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Отчество"
