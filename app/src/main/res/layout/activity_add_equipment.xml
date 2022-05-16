@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#BFE3DEED"
-    tools:context=".AddEvent">
+    tools:context=".AddEquipment">
+
 
     <ImageView
         android:id="@+id/arrowBack"
@@ -32,69 +33,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:text="Тип занятия" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/spinner2"
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CheckBox" />
+
+                <EditText
+                    android:id="@+id/Count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="0"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Тема занятия"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName2"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Задание"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Критерии оценивания"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName6"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Номер группы"
-                android:inputType="textPersonName" />
-
-            <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Дата"
-                android:inputType="date" />
-
-            <CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
         </LinearLayout>
     </ScrollView>
 
@@ -102,7 +66,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Добавить оборудование"
+        android:text="Сохранить данные"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
