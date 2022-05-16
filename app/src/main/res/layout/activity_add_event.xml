@@ -8,24 +8,37 @@
     tools:context=".AddEvent">
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_masterskie" />
+
+    <ImageView
         android:id="@+id/arrowBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/previous"
+        android:onClick="onClickBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_back" />
 
     <ScrollView
-        android:layout_width="408dp"
-        android:layout_height="563dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="385dp"
+        android:layout_height="567dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arrowBack"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/arrowBack">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,9 +49,9 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="Тип занятия"
                 android:textColor="@color/black"
-                android:textSize="20dp"
-                android:text="Тип занятия" />
+                android:textSize="20dp" />
 
             <Spinner
                 android:id="@+id/spinner2"
@@ -81,19 +94,11 @@
                 android:hint="Номер группы"
                 android:inputType="textPersonName" />
 
-            <EditText
-                android:id="@+id/editTextDate"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:hint="Дата"
-                android:inputType="date" />
-
             <CalendarView
                 android:id="@+id/calendarView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:clickable="true" />
 
         </LinearLayout>
     </ScrollView>
@@ -102,6 +107,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
+        android:onClick="onClickAddEquip"
         android:text="Добавить оборудование"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
@@ -126,7 +132,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FF078300"
+            android:background="#42AF3C"
+            android:clickable="false"
             app:srcCompat="@drawable/home_active" />
 
         <ImageView
@@ -135,6 +142,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickChecklist"
             app:srcCompat="@drawable/checklist_active" />
 
         <ImageView
@@ -143,6 +153,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickStudent"
             app:srcCompat="@drawable/student_active" />
     </LinearLayout>
 

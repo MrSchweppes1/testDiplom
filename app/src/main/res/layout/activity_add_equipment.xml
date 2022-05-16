@@ -9,11 +9,24 @@
 
 
     <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_masterskie" />
+
+    <ImageView
         android:id="@+id/arrowBack"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:contentDescription="@string/previous"
+        android:onClick="onClickBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_back" />
@@ -90,7 +103,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FF078300"
+            android:background="#42AF3C"
             app:srcCompat="@drawable/home_active" />
 
         <ImageView
@@ -99,6 +112,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickChecklist"
             app:srcCompat="@drawable/checklist_active" />
 
         <ImageView
@@ -107,6 +123,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickChecklist"
             app:srcCompat="@drawable/student_active" />
     </LinearLayout>
 

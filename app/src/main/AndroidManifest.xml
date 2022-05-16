@@ -7,9 +7,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/logo_masterskie"
+        android:label="Accountig of Workshops"
+        android:roundIcon="@drawable/logo_masterskie"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestDiplom"
         tools:targetApi="31">
@@ -29,12 +29,12 @@
             android:name=".ChecklistPage"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_home_page"
+            android:label=" "
             android:theme="@style/Theme.TestDiplom.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".HomePage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

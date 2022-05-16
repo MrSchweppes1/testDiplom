@@ -7,19 +7,31 @@
     android:background="#BFE3DEED"
     tools:context=".AddStudent">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_masterskie" />
+
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddEvent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="364dp"
         android:text="Заполнить данные"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="412dp"
         android:layout_height="52dp"
         android:background="#00673AB7"
@@ -35,6 +47,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickHomePage"
             app:srcCompat="@drawable/home_active" />
 
         <ImageView
@@ -43,6 +58,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickChecklist"
             app:srcCompat="@drawable/checklist_active" />
 
         <ImageView
@@ -50,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FF078300"
+            android:background="#42AF3C"
             app:srcCompat="@drawable/student_active" />
     </LinearLayout>
 

@@ -7,6 +7,18 @@
     android:background="#BFE3DEED"
     tools:context=".HomePage">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_masterskie" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -29,18 +41,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAddEvent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="84dp"
+        android:onClick="onClickEvent"
         android:text="Заполнить данные"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="412dp"
         android:layout_height="52dp"
         android:background="#00673AB7"
@@ -55,7 +70,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#FF078300"
+            android:background="#42AF3C"
             app:srcCompat="@drawable/home_active" />
 
         <ImageView
@@ -64,6 +79,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickChecklist"
             app:srcCompat="@drawable/checklist_active" />
 
         <ImageView
@@ -72,19 +90,24 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="#6200ee"
-            app:srcCompat="@drawable/student_active" />
+            android:clickable="true"
+            android:contentDescription="@string/previous"
+            android:onClick="onClickStudent"
+            app:srcCompat="@drawable/student2" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnNewEquipment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="124dp"
+        android:onClick="onClickNewEquip"
         android:text="Добавить новое оборудование"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="@+id/btnAddEvent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnAddEvent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddEvent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
