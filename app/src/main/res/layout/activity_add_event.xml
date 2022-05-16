@@ -141,7 +141,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#6200ee"
+            android:background="#956cff"
             android:clickable="true"
             android:contentDescription="@string/previous"
             android:onClick="onClickChecklist"
@@ -152,11 +152,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="#6200ee"
+            android:background="#956cff"
             android:clickable="true"
             android:contentDescription="@string/previous"
             android:onClick="onClickStudent"
-            app:srcCompat="@drawable/student_active" />
+            app:srcCompat="@drawable/student2" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
