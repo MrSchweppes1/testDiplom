@@ -14,24 +14,26 @@ class MyDbManager(context: Context) {
     fun openDb(){
         db = myDbHelper.writableDatabase
     }
-    fun insertToDb( title_group: String){
+    fun insertToDb( groupname: String, surename: String, name: String, patronymic:String){
         val values = ContentValues().apply{
-            put(MyDbNameClass.COLUMN_NAME_TITLE, title_group)
-
+            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_GROUPNAME, groupname)
+            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_SURENAME, surename)
+            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_NAME, name)
+            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_PATRONYMIC, patronymic)
         }
-        db?.insert(MyDbNameClass.TABLE_NAME,null,values)
+        db?.insert(MyDbNameClass.MyDbGroups.TABLE_NAME,null,values)
     }
 
     @SuppressLint("Range")
     fun readDbData() : ArrayList<String>{
         val dataList = ArrayList<String>()
 
-        val cursor = db?.query(MyDbNameClass.TABLE_NAME,null,null,
+        val cursor = db?.query(MyDbNameClass.MyDbGroups.TABLE_NAME,null,null,
             null,null,null,null)
 
 
             while (cursor?.moveToNext()!!){
-                val dataText = cursor.getString(cursor.getColumnIndex(MyDbNameClass.COLUMN_NAME_TITLE))
+                val dataText = cursor.getString(cursor.getColumnIndex(MyDbNameClass.MyDbGroups.COLUMN_NAME_GROUPNAME))
                 dataList.add(dataText.toString())
             }
         cursor.close()

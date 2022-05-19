@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/btnAddEvent"
+        android:id="@+id/btnSaveStudent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
@@ -105,9 +105,9 @@
         android:text="Добавить новое оборудование"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/btnAddEvent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSaveStudent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btnAddEvent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddEvent" />
+        app:layout_constraintStart_toStartOf="@+id/btnSaveStudent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveStudent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

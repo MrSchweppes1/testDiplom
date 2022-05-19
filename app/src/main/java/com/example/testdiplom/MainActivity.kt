@@ -33,14 +33,14 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<TextView>(R.id.tvTest).text = ""
 
-        myDbManager.insertToDb(findViewById<EditText>(R.id.edTitle).text.toString()) // почему то не видит едит текст
-       val dataList = myDbManager.readDbData()
-
-        for (item in dataList){
-            findViewById<TextView>(R.id.tvTest).append(item)
-            findViewById<TextView>(R.id.tvTest).append("\n")
-
-        }
+//        myDbManager.insertToDb(findViewById<EditText>(R.id.edTitle).text.toString()) // почему то не видит едит текст
+//       val dataList = myDbManager.readDbData()
+//
+//        for (item in dataList){
+//            findViewById<TextView>(R.id.tvTest).append(item)
+//            findViewById<TextView>(R.id.tvTest).append("\n")
+//
+//        }
 
     }
 
