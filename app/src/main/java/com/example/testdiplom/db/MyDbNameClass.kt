@@ -39,4 +39,16 @@ object MyDbNameClass{
                 "${BaseColumns._ID} INTEGER PRIMARY KEY, $COLUMN_NAME_Title TEXT)"
         const val Drop_Table = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
+
+    object MydbEvent :BaseColumns{
+        const val TABLE_NAME = "EventList"
+        const val COLUMN_NAME_Workshops = "workshops"
+        const val COLUMN_NAME_LessonType = "lessonType"
+        const val COLUMN_NAME_Topic = "topic"
+        const val COLUMN_NAME_Exercise = "exercise"
+        const val COLUMN_NAME_Criteria = "criteria"
+        const val COLUMN_NAME_GroupNameID = "groupnameID"
+        const val COLUMN_NAME_Date = "date"
+
+    }
 }
