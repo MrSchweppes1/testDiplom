@@ -17,6 +17,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_masterskie" />
 
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="375dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveEquip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TypeEquip">
+
+        <TextView
+            android:id="@+id/tvTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
     <ImageView
         android:id="@+id/arrowBack2"
         android:layout_width="48dp"
@@ -31,7 +46,7 @@
         app:srcCompat="@drawable/arrow_back" />
 
     <EditText
-        android:id="@+id/edTitle"
+        android:id="@+id/NameEquip"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -47,29 +62,30 @@
         app:layout_constraintTop_toBottomOf="@+id/arrowBack2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/TypeEquip"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Тип оборудования"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/edTitle"
+        app:layout_constraintEnd_toEndOf="@+id/NameEquip"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edTitle"
-        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
+        app:layout_constraintStart_toStartOf="@+id/NameEquip"
+        app:layout_constraintTop_toBottomOf="@+id/NameEquip" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSaveEquip"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
+        android:onClick="SaveEquip"
         android:text="Сохранить оборудование"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="@+id/edTitle"
-        app:layout_constraintStart_toStartOf="@+id/edTitle" />
+        app:layout_constraintEnd_toEndOf="@+id/NameEquip"
+        app:layout_constraintStart_toStartOf="@+id/NameEquip" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"

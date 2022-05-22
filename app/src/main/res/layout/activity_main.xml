@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/edTitle"
+        android:id="@+id/NameEquip"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,12 +30,12 @@
         android:gravity="top"
         android:hint="Title"
         android:inputType="textMultiLine|textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/edTitle"
-        app:layout_constraintStart_toStartOf="@+id/edTitle"
-        app:layout_constraintTop_toBottomOf="@+id/edTitle" />
+        app:layout_constraintEnd_toEndOf="@+id/NameEquip"
+        app:layout_constraintStart_toStartOf="@+id/NameEquip"
+        app:layout_constraintTop_toBottomOf="@+id/NameEquip" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSaveEquip"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -49,7 +49,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="375dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveEquip"
         app:layout_constraintEnd_toEndOf="@+id/edText"
         app:layout_constraintStart_toStartOf="@+id/edText"
         app:layout_constraintTop_toBottomOf="@+id/edText">

@@ -1,54 +1,60 @@
 package com.example.testdiplom.db
 
 import android.provider.BaseColumns
+import android.provider.BaseColumns._ID
 
 object MyDbNameClass{
-    const val DATABASE_VERSION = 3
+    const val DATABASE_VERSION = 4
     const val DATABASE_NAME = "AccountingOfWorkshops.db"
 
-    object MyDbGroups :BaseColumns{
+    object MyDbGroups {
     const val TABLE_NAME = "Groups"
-    const val COLUMN_NAME_GROUPNAME = "groupname"
-    const val COLUMN_NAME_SURENAME = "surename"
-    const val COLUMN_NAME_NAME = "name"
-    const val COLUMN_NAME_PATRONYMIC= "patronymic"
+    const val Groups_ID = "id"
+    const val Groups_GROUPNAME = "groupname"
+    const val Groups_SURENAME = "surename"
+    const val Groups_NAME = "name"
+    const val Groups_PATRONYMIC= "patronymic"
 
         const val Create_Table = "Create table if not exists $TABLE_NAME (" +
-                "${BaseColumns._ID} INTEGER PRIMARY KEY, $COLUMN_NAME_GROUPNAME TEXT, " +
-                " $COLUMN_NAME_SURENAME TEXT, $COLUMN_NAME_NAME TEXT, $COLUMN_NAME_PATRONYMIC TEXT)"
+                "$Groups_ID INTEGER PRIMARY KEY autoincrement, $Groups_GROUPNAME TEXT, " +
+                " $Groups_SURENAME TEXT, $Groups_NAME TEXT, $Groups_PATRONYMIC TEXT)"
         const val Drop_Table = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
 
 
-    object MyDbEquipment :BaseColumns{
-        const val TABLE_NAME = "TABLE_NAME_Equipment"
-        const val COLUMN_NAME_TitleEquip = "title_equip"
-        const val COLUMN_NAME_SUBTITLE = "subtitle"
+    object MyDbEquipment {
+        const val TABLE_NAME = "Equipment"
+        const val Equipment_ID = "id"
+        const val Equipment_TitleEquip = "title_equip"
+        const val Equipment_SUBTITLE = "subtitle"
 
         const val Create_Table = "Create table if not exists $TABLE_NAME (" +
-                "${BaseColumns._ID} INTEGER PRIMARY KEY, $COLUMN_NAME_TitleEquip TEXT, " +
-                " $COLUMN_NAME_SUBTITLE TEXT)"
+                "$Equipment_ID INTEGER PRIMARY KEY autoincrement, $Equipment_TitleEquip TEXT, " +
+                " $Equipment_SUBTITLE TEXT)"
         const val Drop_Table = "DROP TABLE IF EXISTS $TABLE_NAME"
     }
 
-    object MydbWorkshops :BaseColumns{
-        const val TABLE_NAME = "Workshops"
-        const val COLUMN_NAME_Title = "title"
 
-        const val Create_Table = "Create table if not exists $TABLE_NAME (" +
-                "${BaseColumns._ID} INTEGER PRIMARY KEY, $COLUMN_NAME_Title TEXT)"
-        const val Drop_Table = "DROP TABLE IF EXISTS $TABLE_NAME"
-    }
+    object MydbEvent {
+        const val TABLE_NAME_EventList = "EventList"
+        const val EventList_ID = "id"
+        const val EventList_Workshops = "workshops"
+        const val EventList_LessonType = "lessonType"
+        const val EventList_Topic = "topic"
+        const val EventList_Exercise = "exercise"
+        const val EventList_Criteria = "criteria"
+        const val EventList_GroupNameID = "groupnameID"
+        const val EventList_Date = "date"
+        const val EventList_EquipmentName = "equipmentName"
+        const val EventList_EquipmentCount = "equipmentCount"
 
-    object MydbEvent :BaseColumns{
-        const val TABLE_NAME = "EventList"
-        const val COLUMN_NAME_Workshops = "workshops"
-        const val COLUMN_NAME_LessonType = "lessonType"
-        const val COLUMN_NAME_Topic = "topic"
-        const val COLUMN_NAME_Exercise = "exercise"
-        const val COLUMN_NAME_Criteria = "criteria"
-        const val COLUMN_NAME_GroupNameID = "groupnameID"
-        const val COLUMN_NAME_Date = "date"
-
+        const val Create_Table = "Create table if not exists $TABLE_NAME_EventList (" +
+                "$EventList_ID INTEGER PRIMARY KEY autoincrement, $EventList_Workshops TEXT" +
+                "$EventList_LessonType TEXT, $EventList_Topic TEXT, " +
+                "$EventList_Exercise TEXT, $EventList_Criteria TEXT, " +
+                "$EventList_GroupNameID INTEGER , $EventList_Date DATE, " +
+                "$EventList_EquipmentName TEXT, $EventList_EquipmentCount INTEGER)," +
+                "FOREIGN KEY ($EventList_GroupNameID) REFERENCES ${MyDbGroups.Groups_ID}"
+        const val Drop_Table = "DROP TABLE IF EXISTS $TABLE_NAME_EventList"
     }
 }

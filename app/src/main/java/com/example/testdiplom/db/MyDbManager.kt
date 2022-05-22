@@ -16,10 +16,10 @@ class MyDbManager(context: Context) {
     }
     fun insertToDb( groupname: String, surename: String, name: String, patronymic:String){
         val values = ContentValues().apply{
-            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_GROUPNAME, groupname)
-            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_SURENAME, surename)
-            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_NAME, name)
-            put(MyDbNameClass.MyDbGroups.COLUMN_NAME_PATRONYMIC, patronymic)
+            put(MyDbNameClass.MyDbGroups.Groups_GROUPNAME, groupname)
+            put(MyDbNameClass.MyDbGroups.Groups_SURENAME, surename)
+            put(MyDbNameClass.MyDbGroups.Groups_NAME, name)
+            put(MyDbNameClass.MyDbGroups.Groups_PATRONYMIC, patronymic)
         }
         db?.insert(MyDbNameClass.MyDbGroups.TABLE_NAME,null,values)
     }
@@ -33,7 +33,8 @@ class MyDbManager(context: Context) {
 
 
             while (cursor?.moveToNext()!!){
-                val dataText = cursor.getString(cursor.getColumnIndex(MyDbNameClass.MyDbGroups.COLUMN_NAME_GROUPNAME))
+                val dataText = cursor.getString(cursor.getColumnIndex(MyDbNameClass.MyDbGroups.Groups_NAME))
+
                 dataList.add(dataText.toString())
             }
         cursor.close()

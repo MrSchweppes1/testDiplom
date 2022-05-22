@@ -44,7 +44,7 @@
         android:id="@+id/btnSaveStudent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="110dp"
         android:onClick="onClickEvent"
         android:text="Заполнить данные"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"

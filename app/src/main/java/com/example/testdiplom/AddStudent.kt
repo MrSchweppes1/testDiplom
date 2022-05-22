@@ -33,12 +33,16 @@ class AddStudent : AppCompatActivity() {
         super.onResume()
         myDbManager.openDb()
         val dataList = myDbManager.readDbData()
+        for (item in dataList){
+            findViewById<TextView>(R.id.tvTest).append(item)
+            findViewById<TextView>(R.id.tvTest).append("\n")
 
+        }
     }
 
     fun onClickSave(view: View) {
 
-       // findViewById<TextView>(R.id.tvTest).text = ""
+       findViewById<TextView>(R.id.tvTest).text = ""
         try {
                 myDbManager.insertToDb(findViewById<EditText>(R.id.groupname).text.toString(),
                     findViewById<EditText>(R.id.surename).text.toString(),
@@ -46,10 +50,19 @@ class AddStudent : AppCompatActivity() {
                     findViewById<EditText>(R.id.patronymic).text.toString()) // почему то не видит едит текст
                 val dataList = myDbManager.readDbData()
 
-                Toast.makeText(this@AddStudent, "Запись успешно добавлена", Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this@AddStudent, "Запись успешно добавлена", Toast.LENGTH_SHORT)
+            toast.show()
+
+            for (item in dataList){
+                findViewById<TextView>(R.id.tvTest).append(item)
+                findViewById<TextView>(R.id.tvTest).append("\n")
+
             }
+        }
         catch (ex:Exception){
-            Toast.makeText(this@AddStudent,ex.localizedMessage, Toast.LENGTH_SHORT).show()
+            val toast = Toast.makeText(this@AddStudent,ex.localizedMessage, Toast.LENGTH_SHORT)
+        toast.show()
+
         }
 
     }
