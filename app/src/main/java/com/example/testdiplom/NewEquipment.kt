@@ -68,12 +68,6 @@ class NewEquipment : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         myDbManager.openDb()
-        val dataList = readDbData()
-        for (item in dataList){
-            findViewById<TextView>(R.id.tvTest).append(item)
-            findViewById<TextView>(R.id.tvTest).append("\n")
-
-        }
     }
     fun SaveEquip(view: View) {
         findViewById<TextView>(R.id.tvTest).text = ""
@@ -81,8 +75,7 @@ class NewEquipment : AppCompatActivity() {
         try {
             insertToDb(findViewById<EditText>(R.id.NameEquip).text.toString(),
                 findViewById<EditText>(R.id.TypeEquip).text.toString())
-
-
+            
             val toast = Toast.makeText(this@NewEquipment, "Запись успешно добавлена", Toast.LENGTH_SHORT)
             toast.show()
         }

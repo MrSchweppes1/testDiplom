@@ -7,6 +7,19 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string-array name="LessonType">
+        <item>Урок</item>
+        <item>Не урок</item>
+    </string-array>
+
+    <string-array name="Workshops">
+        <item>Преподавание в младших классах</item>
+        <item>Преподавание музыки в школе</item>
+        <item>Дошкольное воспитание</item>
+        <item>Социальная работа</item>
+        <item>Медицинский и социальный уход</item>
+    </string-array>
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

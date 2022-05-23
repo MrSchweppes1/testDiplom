@@ -4,7 +4,7 @@ import android.provider.BaseColumns
 import android.provider.BaseColumns._ID
 
 object MyDbNameClass{
-    const val DATABASE_VERSION = 4
+    const val DATABASE_VERSION = 6
     const val DATABASE_NAME = "AccountingOfWorkshops.db"
 
     object MyDbGroups {
