@@ -8,13 +8,31 @@ import java.sql.SQLData
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SimpleCursorAdapter
 import android.widget.Spinner
 import com.example.testdiplom.db.MyDbNameClass
 
-class AddEvent : AppCompatActivity() {
+class AddEvent : AppCompatActivity(),AdapterView.OnItemSelectedListener {
     var db: SQLiteDatabase? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_add_event)
+
+        var spinner = findViewById<Spinner>(R.id.groupName)
+
+        spinner!!.setOnItemSelectedListener(this)
+        val dataList = arrayOf(readDbData())
+        val array_adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, dataList)
+        /* array_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+         spinner!!.setAdapter(array_adapter)*/
+
+
+
+    }
 
     @SuppressLint("Range")
     fun readDbData() : ArrayList<String>{
@@ -34,20 +52,7 @@ class AddEvent : AppCompatActivity() {
         return dataList
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_event)
 
-        val dataList = readDbData()
-        val spinner = findViewById<Spinner>(R.id.groupName)
-        val itemspinner = mutableListOf<String>()
-        for (item in dataList)
-        {
-            itemspinner.add(item)
-        }
-        spinner.adapter = ArrayAdapter(this,
-            android.R.layout.simple_spinner_item, itemspinner)
-    }
 
     fun onClickBack(view: View){
         val intent = Intent(this@AddEvent, HomePage::class.java)
@@ -67,5 +72,13 @@ class AddEvent : AppCompatActivity() {
     fun onClickAddEquip(view: View){
         val intent = Intent(this@AddEvent, AddEquipment::class.java)
         startActivity(intent)
+    }
+
+    override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+       // TODO("Not yet implemented")
+    }
+
+    override fun onNothingSelected(parent: AdapterView<*>?) {
+       //TODO("Not yet implemented")
     }
 }
